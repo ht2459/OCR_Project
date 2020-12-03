@@ -12,22 +12,8 @@ class ImageGenerator(object):
         """
         self.image = cv2.imread(image)
         self.height, self.width, self.channels = self.image.shape
-        self.rotated = None
     
-    def show_image(self, images, n):
-        """
-        image to be shown
-        """
-        if n == 1:
-            images = np.array([images])
-            
-        fig = plt.figure(figsize=(10, 10))
-        for i in range(n):
-            ax = fig.add_subplot(np.sqrt(n),np.sqrt(n),i+1)
-            plt.imshow(images[i,:])
-            ax.axis('off')
-        
-        
+       
     def scale_image(self, image, ratio=0.25, position=(0, 0)):
         """
         param image: Image to be scaled
