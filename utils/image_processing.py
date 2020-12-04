@@ -23,7 +23,7 @@ class ImageGenerator(object):
         param source: Optional tuple for the upper left corner.
         """
         
-        image = Image.open(image)
+        #image = Image.open(image)
         width, height = image.size
         
         width_scaled = int(min(width, height) * ratio)

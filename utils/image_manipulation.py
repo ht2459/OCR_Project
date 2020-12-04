@@ -12,12 +12,12 @@ def rotate(image, angle):
     padded_image = Image.new('RGBA', rotated_image.size, (255,)*4)
     output = Image.composite(rotated_image, padded_image, rotated_image)
     
-    return output
+    return np.array(output)
 
 
 def flip(image, mode='h'):
     """
-    Flip self.image according to the mode specified
+    :param image: an PIL image
     :param mode: 'h' or 'v' or 'hv'. 'h' means horizontal and 'v' means vertical.
     :return flipped: flipped dataset
     """
